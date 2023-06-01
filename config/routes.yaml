@@ -1,0 +1,57 @@
+controllers:
+    resource: ../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../src/Kernel.php
+    type: annotation
+
+home:
+    path: /
+    controller: App\Controller\HomeController::index
+
+team_index:
+    path: /teams
+    controller: App\Controller\TeamController::index
+    methods: GET
+
+team_create:
+    path: /teams/create
+    controller: App\Controller\TeamController::create
+    methods: GET|POST
+
+team_edit:
+    path: /teams/{id}/edit
+    controller: App\Controller\TeamController::edit
+    methods: GET|POST
+
+team_delete:
+    path: /teams/{id}/delete
+    controller: App\Controller\TeamController::delete
+    methods: DELETE
+
+player_index:
+    path: /players
+    controller: App\Controller\PlayerController::index
+    methods: GET
+
+player_create:
+    path: /players/create
+    controller: App\Controller\PlayerController::create
+    methods: GET|POST
+
+player_edit:
+    path: /players/{id}/edit
+    controller: App\Controller\PlayerController::edit
+    methods: GET|POST
+
+player_delete:
+    path: /players/{id}/delete
+    controller: App\Controller\PlayerController::delete
+    methods: DELETE
+
+player_transfer:
+    path: /player/transfer
+    controller: App\Controller\TransferController::transfer
+    methods: GET|POST
+

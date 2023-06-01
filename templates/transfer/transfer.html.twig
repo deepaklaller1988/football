@@ -1,0 +1,13 @@
+<!-- templates/transfer/transfer.html.twig -->
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Player Transfer</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.player) }}
+        {{ form_row(form.sourceTeam) }}
+        {{ form_row(form.targetTeam) }}
+        {{ form_row(form.amount) }}
+        <button type="submit">Transfer</button>
+    {{ form_end(form) }}
+{% endblock %}

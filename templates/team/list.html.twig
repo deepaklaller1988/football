@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Teams</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Money Balance</th>
+            <th>Players</th>
+        </tr>
+        {% for team in teams %}
+            <tr>
+                <td>{{ team.name }}</td>
+                <td>{{ team.country }}</td>
+                <td>{{ team.moneyBalance }}</td>
+                <td>
+                    <ul>
+                        {% for player in team.players %}
+                            <li>{{ player.name }} {{ player.surname }}</li>
+                        {% endfor %}
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

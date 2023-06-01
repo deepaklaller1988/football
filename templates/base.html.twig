@@ -1,0 +1,19 @@
+<!-- templates/base.html.twig -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Football Club Management</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="{{ path('team_index') }}">Teams</a></li>
+                <li><a href="{{ path('player_index') }}">Players</a></li>
+                <li><a href="{{ path('player_transfer') }}">Player Transfer</a></li>
+            </ul>
+        </nav>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

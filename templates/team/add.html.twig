@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Add Team</h1>
+    {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.country) }}
+        {{ form_row(form.moneyBalance) }}
+        {{ form_row(form.players) }}
+        <button type="submit">Add</button>
+    {{ form_end(form) }}
+{% endblock %}
